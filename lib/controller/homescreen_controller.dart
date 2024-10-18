@@ -12,13 +12,13 @@ class HomescreenController with ChangeNotifier {
     "assets/images/d5.png",
     "assets/images/d6.png"
   ];
-  int currentIndex = 0;
+late  int random;
 
 String currentDiceImage = "assets/images/button.png";
 
  updatedice() {
-    currentIndex = Random().nextInt(dicelist.length); 
-     currentDiceImage = dicelist[currentIndex];
+    random = Random().nextInt(dicelist.length); 
+     currentDiceImage = dicelist[random];
    notifyListeners();
  }
 }
